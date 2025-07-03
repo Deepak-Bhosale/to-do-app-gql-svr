@@ -1,0 +1,22 @@
+type List {
+  _id: ID
+  deletedAt: String
+  originalId: ID
+  title: String
+  userId: ID
+  createdAt: String
+  updatedAt: String
+  cards: [Card]
+}
+
+type ListResponse {
+  message: String
+  data: List
+  status: Int
+}
+
+type ListsResponse {
+  message: String
+  data: [List]
+  status: Int
+}

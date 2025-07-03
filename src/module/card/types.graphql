@@ -1,0 +1,16 @@
+type Card {
+  _id: ID
+  listId: ID
+  title: String
+  originalId: ID
+  description: String
+  createdAt: String
+  updatedAt: String
+  deletedAt: String
+}
+
+type CardResponse {
+  message: String
+  data: Card
+  status: Int
+}

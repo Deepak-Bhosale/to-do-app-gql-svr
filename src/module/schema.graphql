@@ -1,0 +1,29 @@
+type Query {
+  getUserData(role: String): [user]
+  getProfile: user
+  lists: ListsResponse
+}
+
+type Mutation {
+  # User Mutations
+  login(input: login): loginUser
+  registerUser(input: UsersData): users
+  updateUser(input: UsersData): users
+  deleteUser(input: deleteUser): users
+
+  # List Mutations
+  addList(title: String!): ListResponse
+  updateList(id: ID!, title: String!): ListResponse
+  deleteList(id: ID!): ListResponse
+
+  # Card Mutations
+  addCard(listId: ID!, title: String!, description: String): CardResponse
+  updateCard(id: ID!, listId: ID, title: String, description: String): CardResponse
+  deleteCard(id: ID!): CardResponse
+}
+
+type Subscription {
+  userAdded: user
+  userUpdated: user
+  userDeleted: user
+}
