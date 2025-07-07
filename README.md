@@ -20,7 +20,7 @@ To set up the GraphQL server of the web application, follow these steps:
 
 1. Navigate to the gql-svr Directory:
    ```bash
-    cd gql-svr
+    cd to-do-app-gql-svr
    ```
 2. Install the project dependencies:
    ```bash
